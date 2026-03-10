@@ -1,7 +1,16 @@
 const makeChange = (c) => {
-  // your name here
+  // Ajay Kumar D
+  let amount = parseInt(c);
+  const q = Math.floor(amount / 25);
+  amount %= 25;
+  const d = Math.floor(amount / 10);
+  amount %= 10;
+  const n = Math.floor(amount / 5);
+  amount %= 5;
+  const p = amount;
+  return { q, d, n, p };
 };
 
-// Do not the change the code below
+// Do not change the code below
 const c = prompt("Enter c: ");
 alert(JSON.stringify(makeChange(c)));
